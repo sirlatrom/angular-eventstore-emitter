@@ -1,0 +1,19 @@
+<html ng-app="policyEvents">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"> </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"> </script>
+    <script src="angular-uuid-service.min.js"> </script>
+    <script src="app.js"> </script>
+  </head>
+  <body>
+    <h1>Event pusher</h1>
+    <section name="PolicyCreated">
+      <form ng-submit="pushEvent()" ng-controller="PolicyCreatedController">
+        <input type="number" ng-model="event.data.policyNumber"/>
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </section>
+  </body>
+</html>
